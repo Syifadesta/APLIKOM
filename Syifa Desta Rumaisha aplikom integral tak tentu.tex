@@ -1,0 +1,663 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{eumat}
+
+\begin{document}
+\begin{eulernotebook}
+\eulersubheading{}
+\eulerheading{BAB 4. INTERGAL TAK TENTU (Antiderivatif)}
+\begin{eulercomment}
+MATERI INTEGRAL TAK TENTU Dibuat Oleh :
+
+NAMA  : SYIFA DESTA RUMAISHA\\
+KELAS : MATEMATIKA E\\
+NIM   : 22305141020
+
+\end{eulercomment}
+\eulersubheading{}
+\begin{eulercomment}
+CAKUPAN MATERI MELIPUTI DIANTARANYA:\\
+-Defini Integral tak tentu\\
+-Sifat- sifat integral tak tentu\\
+-Integral tak tentu fungsi aljabar, trigonometri, eksponensial,
+logaritma, dan komposisi fungsi\\
+-Visualisasi dan kurva fungsi
+
+1. Definisi Intergal Tak Tentu
+
+\end{eulercomment}
+\begin{eulerttcomment}
+    Integral tak tentu (indefinite integral) adalah integral yang
+\end{eulerttcomment}
+\begin{eulercomment}
+tidak memiliki batas-batas nilai tertentu, sehingga hanya diperoleh
+fungsi umumnya saja disertai suatu konstanta C.
+
+\end{eulercomment}
+\begin{eulerttcomment}
+    Misalkan diketahui suatu fungsi F(x) yang merupakan fungsi umum
+\end{eulerttcomment}
+\begin{eulercomment}
+yang bersifat F'(x)=f(x), maka integral tak tentu merupakan himpunan
+anti turunan F(x) dari f(x) pada interval negatif tak hingga sampai
+tak hingga yang dinotasikan :
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+ F(x) = \int f(x)\ dx + C
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$F(x)=('integrate(f(x),x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+F\left(x\right)=\int {f\left(x\right)}{\;dx}+c
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Definisi kurva fungsi antiderifatif
+
+\end{eulercomment}
+\begin{eulerttcomment}
+      Kurva fungsi antiderivatif adalah kurva yang menggambarkan
+\end{eulerttcomment}
+\begin{eulercomment}
+hubungan antara suatu fungsi dan antiderivatifnya. Antiderivatif, juga
+dikenal sebagai integral tak tentu. Dalam integral, fungsi
+antiderivatif dapat dianggap sebagai "anti turunan" dari fungsi
+aslinya.
+
+Contoh :
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int 3x^2 dx
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$F(x)=('integrate(3*x^2,x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+F\left(x\right)=3\,\int {x^2}{\;dx}+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate(3*x^2,x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+3\,\int {x^2}{\;dx}+c=x^3+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d(["3*x^2","x^3","x^3+1","x^3+2","x^3+3"]): //grafik fungsinya, hasil integral, penambahan sebarang konstanta dari hasil integral 
+\end{eulerprompt}
+\eulerimg{24}{images/Syifa Desta Rumaisha aplikom integral tak tentu-006.png}
+\begin{eulercomment}
+Penyelesaiannya dengan memasukan sebarang nilai C
+
+Contoh :\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int x^5 dx
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$F(x)=('integrate(x^5,x) +c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+F\left(x\right)=\int {x^5}{\;dx}+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate(x^5,x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {x^5}{\;dx}+c=\frac{x^6}{6}+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d(["x^5","x^6/6","(x^6/6)+1","(x^6/6)+2"]):
+\end{eulerprompt}
+\eulerimg{24}{images/Syifa Desta Rumaisha aplikom integral tak tentu-010.png}
+\eulersubheading{}
+\begin{eulercomment}
+2. Sifat-sifat Integral Tak Tentu
+
+\end{eulercomment}
+\begin{eulerttcomment}
+    Dalam perhitungan, integral tak tentu memiliki sifat-sifat yang
+\end{eulerttcomment}
+\begin{eulercomment}
+dapat digunakan. Ada tiga sifat integral tak tentu yaitu sebagai
+berikut:\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   a. Sifat Pangkat
+\end{eulerttcomment}
+\begin{eulerformula}
+\[
+\int x^n dx + c = \frac {x^n+1}{n+1} + c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate(x^n,x)+c)
+\end{eulerprompt}
+\begin{euleroutput}
+  Answering "Is n equal to -1?" with "no"
+\end{euleroutput}
+\begin{eulerformula}
+\[
+\int {x^{n}}{\;dx}+c=\frac{x^{n+1}}{n+1}+c
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+ b. Penjumlahan dan Pengurangan
+\end{eulerttcomment}
+\begin{eulerformula}
+\[
+\int[f(x)\pm g(x)]dx = \int f(x)dx \pm \int g(x) dx
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>function f(x) &&= f(x)
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                                   f(x)
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>function g(x) &&= g(x)
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                                   g(x)
+  
+\end{euleroutput}
+\begin{eulercomment}
+Penjumlahan
+\end{eulercomment}
+\begin{eulerprompt}
+>$('integrate([f(x)+g(x)],x))=('integrate(f(x),x))+('integrate(g(x),x))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {\left[ g\left(x\right)+f\left(x\right) \right] }{\;dx}=\int {  g\left(x\right)}{\;dx}+\int {f\left(x\right)}{\;dx}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Pengurangan
+\end{eulercomment}
+\begin{eulerprompt}
+>$('integrate([f(x)+g(x)],x))=('integrate(f(x),x))-('integrate(g(x),x))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {\left[ g\left(x\right)+f\left(x\right) \right] }{\;dx}=\int {  f\left(x\right)}{\;dx}-\int {g\left(x\right)}{\;dx}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+c. Konstanta\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int k.f(x) dx = k \int f(x) dx
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$('integrate(kf(x),x))=(k*'integrate(f(x),x))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {{\it kf}\left(x\right)}{\;dx}=k\,\int {f\left(x\right)}{\;dx}
+\]
+\end{eulerformula}
+\eulersubheading{}
+\begin{eulercomment}
+3. INTERGAL TAK TENTU FUNGSI ALJABAR
+
+\end{eulercomment}
+\begin{eulerttcomment}
+    A. Defnisi
+      Integral tak tentu fungsi aljabar merupakan sebuah operasi
+\end{eulerttcomment}
+\begin{eulercomment}
+matematika yang menghasilkan fungsi lain yang turunan parsialnya akan
+sama dengan fungsi asal. Dalam konteks fungsi aljabar, integral tak
+tentu biasanya melibatkan fungsi-fungsi seperti polinomial,
+eksponensial, dan trigonometri, dan menghasilkan fungsi yang mewakili
+daerah di bawah kurva fungsi asal terhadap variabel independen.
+
+\end{eulercomment}
+\begin{eulerttcomment}
+    B. Rumus-rumus integral fungsi aljabar
+\end{eulerttcomment}
+\begin{eulercomment}
+Bentuk pertama\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int dx = x + C
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Dalam bentuk pertama bukan berarti tidak ada konstanta yang terlibat
+dalam integral tak tentu, tapi ada konstanta yaitu angka 1, di dalam
+matematika biasanya angka 1 sebagai konstanta tidak dituliskan.
+
+Bentuk kedua\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int k dx = kx + C
+\]
+\end{eulerformula}
+\begin{eulercomment}
+k merupakan konstanta yang berupa sebarang bilangan.
+
+Bentuk ketiga\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int kx^n dx = \frac {k}{n+1} x^{n+1} + C
+\]
+\end{eulerformula}
+\begin{eulercomment}
+k dan n merupakan sebarang bilangan bulat, dengan k adalah konstanta
+dan n adalah pangkat dari x dengan syarat n tidak sama dengan -1.
+
+Bentuk keempat\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int k.f(x) dx = k \int f(x) dx
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+ Dengan k merupakan sebarang bilangan bulat.
+\end{eulerttcomment}
+\begin{eulercomment}
+Bentuk kelima\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int (f(x)\pm g(x)) dx = \int f(x) dx \pm \int g(x) dx
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Bentuk keenam\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int k(ax+b)^n dx = \frac {k}{a(n+1)} (ax+b)^{n+1} + C
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+ Dalam bentuk integral keenam hanya berlaku jika angka pada pangkat x
+\end{eulerttcomment}
+\begin{eulercomment}
+adalah 1.
+
+
+\end{eulercomment}
+\begin{eulerttcomment}
+    C. Contoh Soal & Kurva
+\end{eulerttcomment}
+\begin{eulercomment}
+Soal 1\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int 5x^2 dx
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate(5*x^2,x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+5\,\int {x^2}{\;dx}+c=\frac{5\,x^3}{3}+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d(["5*x^2","(5*x^3/3)","(5*x^3/3)+1","(5*x^3/3)+2"]):
+\end{eulerprompt}
+\eulerimg{24}{images/Syifa Desta Rumaisha aplikom integral tak tentu-026.png}
+\begin{eulercomment}
+Soal 2
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+f(x)= 4x+2, g(x)= 2x+1
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>function f(x) &&= 4*x+2
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                                 4 x + 2
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>function g(x) &&= 2*x+1
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                                 2 x + 1
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>$showev('integrate(f(x)+(g(x)),x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {6\,x+3}{\;dx}+c=3\,x^2+3\,x+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d(["6*x+3","3*x^2+3*x","(3*x^2+3*x)+1","(3*x^2+3*x)+2"]):
+\end{eulerprompt}
+\eulerimg{24}{images/Syifa Desta Rumaisha aplikom integral tak tentu-029.png}
+\begin{eulercomment}
+Soal 3
+\end{eulercomment}
+\begin{eulerprompt}
+>$showev('integrate(x*sqrt(x+2),x))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {x\,\sqrt{x+2}}{\;dx}=\frac{2\,\left(x+2\right)^{\frac{5}{2}}  }{5}-\frac{4\,\left(x+2\right)^{\frac{3}{2}}}{3}
+\]
+\end{eulerformula}
+\eulersubheading{}
+\begin{eulercomment}
+4. INTERGAL TAK TENTU FUNGSI NON ALJABAR (transenden)\\
+\end{eulercomment}
+\begin{eulerttcomment}
+    4.1 Intergal Tak Tentu Fungsi Trigonometri
+\end{eulerttcomment}
+\begin{eulercomment}
+
+\end{eulercomment}
+\begin{eulerttcomment}
+        A. Defnisi
+    Integral tak tentu fungsi trigonometri merupakan operasi
+\end{eulerttcomment}
+\begin{eulercomment}
+matematika yang digunakan untuk mencari fungsi asal sebelumnya
+(biasanya ditambahkan dengan konstanta) yang ketika diambil turunan
+akan menghasilkan fungsi trigonometri tersebut.\\
+\end{eulercomment}
+\begin{eulerttcomment}
+    Secara umum, integral tak tentu fungsi trigonometri seperti
+\end{eulerttcomment}
+\begin{eulercomment}
+sin(x), cos(x), atau tan(x) melibatkan berbagai rumus dan teknik
+integral yang berbeda tergantung pada jenis fungsi trigonometri yang
+terlibat.
+
+\end{eulercomment}
+\begin{eulerttcomment}
+        B. Rumus-rumus integral fungsi trigonometri
+\end{eulerttcomment}
+\begin{eulercomment}
+
+\end{eulercomment}
+\eulerimg{19}{images/Syifa Desta Rumaisha aplikom integral tak tentu-031.png}
+\begin{eulercomment}
+
+\end{eulercomment}
+\begin{eulerttcomment}
+        C. Contoh Soal & Kurva
+\end{eulerttcomment}
+\begin{eulercomment}
+Soal 1
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int 2 cos x dx
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate(2*cos(x),x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+2\,\int {\cos x}{\;dx}+c=2\,\sin x+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d(["2*cos(x)","2*sin(x)","2*sin(x)+1","2*sin(x)+2"]):
+\end{eulerprompt}
+\eulerimg{24}{images/Syifa Desta Rumaisha aplikom integral tak tentu-034.png}
+\begin{eulercomment}
+Soal 2
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int cos (2x+1) dx
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate(cos(2*x+1),x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {\cos \left(2\,x+1\right)}{\;dx}+c=\frac{\sin \left(2\,x+1  \right)}{2}+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d(["cos(2*x+1)","sin(2*x+1)/2","(sin(2*x+1)/2)+1","(sin(2*x+1)/2)+2"]):
+\end{eulerprompt}
+\eulerimg{24}{images/Syifa Desta Rumaisha aplikom integral tak tentu-037.png}
+\begin{eulerttcomment}
+ 4.2 Intergal Tak Tentu Fungsi Eksponensial
+\end{eulerttcomment}
+\begin{eulercomment}
+\end{eulercomment}
+\begin{eulerttcomment}
+        A. Defnisi
+     Integral dari fungsi eksponensial adalah operasi matematika yang
+\end{eulerttcomment}
+\begin{eulercomment}
+digunakan untuk menemukan area di bawah kurva fungsi eksponensial
+tertentu. Integral fungsi eksponensial merupakan proses untuk
+menemukan fungsi yang, ketika di turunkan, akan menghasilkan fungsi
+eksponensial tersebut.
+
+\end{eulercomment}
+\begin{eulerttcomment}
+        B. Rumus-rumus integral fungsi eksponensial
+\end{eulerttcomment}
+\begin{eulercomment}
+Secara umum, integral dari fungsi eksponensial e\textasciicircum{}x adalah:
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int e^x dx = e^x + c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate((E^x),x)+ c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {e^{x}}{\;dx}+c=e^{x}+c
+\]
+\end{eulerformula}
+\begin{eulercomment}
+di mana "C" adalah konstanta integrasi. Ini berarti hasil dari
+integral ini adalah fungsi eksponensial e\textasciicircum{}x itu sendiri ditambah
+dengan konstanta integrasi.
+
+\end{eulercomment}
+\begin{eulerttcomment}
+       C. Contoh Soal & Kurva
+\end{eulerttcomment}
+\begin{eulercomment}
+
+Soal 1\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int e^{3x} dx
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate((E^x)^3,x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {e^{3\,x}}{\;dx}+c=\frac{e^{3\,x}}{3}+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+> \(\backslash\)plot2d(["(E^x)^3","((E^x)^3)/3","(((E^x)^3)/3)+7"],color=[blue,red,green]):
+\end{eulerprompt}
+\eulerimg{24}{images/Syifa Desta Rumaisha aplikom integral tak tentu-042.png}
+\begin{eulercomment}
+Soal 2\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int xe^{2x} dx
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate(x*(E^x)^2,x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {x\,e^{2\,x}}{\;dx}+c=\frac{\left(2\,x-1\right)\,e^{2\,x}}{4}+  c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d(["x*(E^x)^2","((2*x-1)E^x^2)/4","(2*x-1)E^x^2/4 +1"]):
+\end{eulerprompt}
+\eulerimg{24}{images/Syifa Desta Rumaisha aplikom integral tak tentu-045.png}
+\begin{eulerttcomment}
+ 4.3 Intergal Tak Tentu Fungsi Logaritma
+        A. Defnisi
+    Integral dari fungsi logaritma adalah operasi matematika yang
+\end{eulerttcomment}
+\begin{eulercomment}
+digunakan untuk menemukan area di bawah kurva fungsi logaritma
+tertentu.
+
+\end{eulercomment}
+\begin{eulerttcomment}
+        B. Rumus integral fungsi logaritma
+\end{eulerttcomment}
+\begin{eulercomment}
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int log(x) dx = x log(x) - x + C
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate(ln(x),x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {\log x}{\;dx}+c=x\,\log x-x+c
+\]
+\end{eulerformula}
+\begin{eulerttcomment}
+        C. Contoh Soal & Kurva
+\end{eulerttcomment}
+\begin{eulercomment}
+Soal 1
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\int log(2x) dx
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>$showev('integrate(log(2*x),x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {\log \left(2\,x\right)}{\;dx}+c=\frac{2\,x\,\log \left(2\,x  \right)-2\,x}{2}+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d(["log(2*x)","(2*x)log(2*x)-2*x/2 +1","(2*x)log(2*x)-2*x/2 +2"]):
+\end{eulerprompt}
+\eulerimg{24}{images/Syifa Desta Rumaisha aplikom integral tak tentu-050.png}
+\eulersubheading{}
+\begin{eulercomment}
+5. INTERGAL TAK TENTU FUNGSI KOMPOSISI
+
+\end{eulercomment}
+\begin{eulerttcomment}
+   A. Defnisi
+    Integral tak tentu dari fungsi komposisi, juga dikenal sebagai
+\end{eulerttcomment}
+\begin{eulercomment}
+"integral tak tentu dari substitusi," adalah teknik integral yang
+digunakan untuk mengintegrasikan fungsi yang merupakan hasil dari
+komposisi dua fungsi.
+
+\end{eulercomment}
+\begin{eulerttcomment}
+  B. Contoh Soal dan kurva
+\end{eulerttcomment}
+\begin{eulercomment}
+
+Soal 1\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   f(x)=x+1, g(x)=x+2
+\end{eulerttcomment}
+\begin{eulerprompt}
+>function f(x) &= x+1
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                                  x + 1
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>function g(x) &= x+2
+\end{eulerprompt}
+\begin{euleroutput}
+  
+                                  x + 2
+  
+\end{euleroutput}
+\begin{eulerprompt}
+>$showev('integrate(f(g(x)),x)+c)
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\int {x+3}{\;dx}+c=\frac{x^2}{2}+3\,x+c
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d(["x+3","((x^2)/2)+3*x","(((x^2)/2)+3*x)+1","(((x^2)/2)+3*x)+2"]):
+\end{eulerprompt}
+\eulerimg{24}{images/Syifa Desta Rumaisha aplikom integral tak tentu-052.png}
+\eulerheading{TERIMAKSIH}
+\eulersubheading{}
+\begin{eulerprompt}
+> 
+> 
+\end{eulerprompt}
+\end{eulernotebook}
+\end{document}
