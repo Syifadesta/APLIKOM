@@ -1,0 +1,346 @@
+﻿% ---
+%% * BAB 4. INTERGAL TAK TENTU (Antiderivatif)
+% 
+% MATERI INTEGRAL TAK TENTU Dibuat Oleh :
+% 
+% NAMA  : SYIFA DESTA RUMAISHA
+%% KELAS : MATEMATIKA E
+%% NIM   : 22305141020
+% 
+% ---
+%% CAKUPAN MATERI MELIPUTI DIANTARANYA:
+%% -Defini Integral tak tentu
+%% -Sifat- sifat integral tak tentu
+%% -Integral tak tentu fungsi aljabar, trigonometri, eksponensial,
+% logaritma, dan komposisi fungsi
+%% -Visualisasi dan kurva fungsi
+% 
+% 1. Definisi Intergal Tak Tentu
+% 
+%     Integral tak tentu (indefinite integral) adalah integral yang
+% tidak memiliki batas-batas nilai tertentu, sehingga hanya diperoleh
+% fungsi umumnya saja disertai suatu konstanta C.
+% 
+%     Misalkan diketahui suatu fungsi F(x) yang merupakan fungsi umum
+% yang bersifat F'(x)=f(x), maka integral tak tentu merupakan himpunan
+% anti turunan F(x) dari f(x) pada interval negatif tak hingga sampai
+% tak hingga yang dinotasikan :
+% 
+% latex:  F(x) = \int f(x)\ dx + C
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-001.png
+% // latex:  F(x) = \int f(x)\ dx + C
+>$F(x)=('integrate(f(x),x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-002.png
+% // latex: F\left(x\right)=\int {f\left(x\right)}{\;dx}+c
+% Definisi kurva fungsi antiderifatif
+% 
+%       Kurva fungsi antiderivatif adalah kurva yang menggambarkan
+% hubungan antara suatu fungsi dan antiderivatifnya. Antiderivatif, juga
+% dikenal sebagai integral tak tentu. Dalam integral, fungsi
+% antiderivatif dapat dianggap sebagai "anti turunan" dari fungsi
+% aslinya.
+% 
+% Contoh :
+% 
+% latex: \int 3x^2 dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-003.png
+% // latex: \int 3x^2 dx
+>$F(x)=('integrate(3*x^2,x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-004.png
+% // latex: F\left(x\right)=3\,\int {x^2}{\;dx}+c
+>$showev('integrate(3*x^2,x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-005.png
+% // latex: 3\,\int {x^2}{\;dx}+c=x^3+c
+>plot2d(["3*x^2","x^3","x^3+1","x^3+2","x^3+3"]): //grafik fungsinya, hasil integral, penambahan sebarang konstanta dari hasil integral 
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-006.png
+% Penyelesaiannya dengan memasukan sebarang nilai C
+% 
+% Contoh :
+%% latex: \int x^5 dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-007.png
+% // latex: \int x^5 dx
+>$F(x)=('integrate(x^5,x) +c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-008.png
+% // latex: F\left(x\right)=\int {x^5}{\;dx}+c
+>$showev('integrate(x^5,x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-009.png
+% // latex: \int {x^5}{\;dx}+c=\frac{x^6}{6}+c
+>plot2d(["x^5","x^6/6","(x^6/6)+1","(x^6/6)+2"]):
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-010.png
+>
+% ---
+%% 2. Sifat-sifat Integral Tak Tentu
+% 
+%     Dalam perhitungan, integral tak tentu memiliki sifat-sifat yang
+% dapat digunakan. Ada tiga sifat integral tak tentu yaitu sebagai
+% berikut:
+%%    a. Sifat Pangkat
+%% latex: \int x^n dx + c = \frac {x^n+1}{n+1} + c
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-011.png
+% // latex: \int x^n dx + c = \frac {x^n+1}{n+1} + c
+>$showev('integrate(x^n,x)+c)
+Answering "Is n equal to -1?" with "no"
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-012.png
+% // latex: \int {x^{n}}{\;dx}+c=\frac{x^{n+1}}{n+1}+c
+%  b. Penjumlahan dan Pengurangan
+%% latex: \int[f(x)\pm g(x)]dx = \int f(x)dx \pm \int g(x) dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-013.png
+% // latex: \int[f(x)\pm g(x)]dx = \int f(x)dx \pm \int g(x) dx
+>function f(x) &&= f(x)
+
+                                 f(x)
+
+>function g(x) &&= g(x)
+
+                                 g(x)
+
+% Penjumlahan
+>$('integrate([f(x)+g(x)],x))=('integrate(f(x),x))+('integrate(g(x),x))
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-014.png
+% // latex: \int {\left[ g\left(x\right)+f\left(x\right) \right] }{\;dx}=\int {  g\left(x\right)}{\;dx}+\int {f\left(x\right)}{\;dx}
+% Pengurangan
+>$('integrate([f(x)+g(x)],x))=('integrate(f(x),x))-('integrate(g(x),x))
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-015.png
+% // latex: \int {\left[ g\left(x\right)+f\left(x\right) \right] }{\;dx}=\int {  f\left(x\right)}{\;dx}-\int {g\left(x\right)}{\;dx}
+% c. Konstanta
+%% latex: \int k.f(x) dx = k \int f(x) dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-016.png
+% // latex: \int k.f(x) dx = k \int f(x) dx
+>$('integrate(kf(x),x))=(k*'integrate(f(x),x))
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-017.png
+% // latex: \int {{\it kf}\left(x\right)}{\;dx}=k\,\int {f\left(x\right)}{\;dx}
+% ---
+%% 3. INTERGAL TAK TENTU FUNGSI ALJABAR
+% 
+%     A. Defnisi
+%%       Integral tak tentu fungsi aljabar merupakan sebuah operasi
+% matematika yang menghasilkan fungsi lain yang turunan parsialnya akan
+% sama dengan fungsi asal. Dalam konteks fungsi aljabar, integral tak
+% tentu biasanya melibatkan fungsi-fungsi seperti polinomial,
+% eksponensial, dan trigonometri, dan menghasilkan fungsi yang mewakili
+% daerah di bawah kurva fungsi asal terhadap variabel independen.
+% 
+%     B. Rumus-rumus integral fungsi aljabar
+%% Bentuk pertama
+%% latex: \int dx = x + C
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-018.png
+% // latex: \int dx = x + C
+>
+% Dalam bentuk pertama bukan berarti tidak ada konstanta yang terlibat
+% dalam integral tak tentu, tapi ada konstanta yaitu angka 1, di dalam
+% matematika biasanya angka 1 sebagai konstanta tidak dituliskan.
+% 
+% Bentuk kedua
+%% latex: \int k dx = kx + C
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-019.png
+% // latex: \int k dx = kx + C
+>
+% k merupakan konstanta yang berupa sebarang bilangan.
+% 
+% Bentuk ketiga
+%% latex: \int kx^n dx = \frac {k}{n+1} x^{n+1} + C
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-020.png
+% // latex: \int kx^n dx = \frac {k}{n+1} x^{n+1} + C
+>
+% k dan n merupakan sebarang bilangan bulat, dengan k adalah konstanta
+% dan n adalah pangkat dari x dengan syarat n tidak sama dengan -1.
+% 
+% Bentuk keempat
+%% latex: \int k.f(x) dx = k \int f(x) dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-021.png
+% // latex: \int k.f(x) dx = k \int f(x) dx
+>
+%  Dengan k merupakan sebarang bilangan bulat.
+% 
+% Bentuk kelima
+%% latex: \int (f(x)\pm g(x)) dx = \int f(x) dx \pm \int g(x) dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-022.png
+% // latex: \int (f(x)\pm g(x)) dx = \int f(x) dx \pm \int g(x) dx
+>
+% Bentuk keenam
+%% latex: \int k(ax+b)^n dx = \frac {k}{a(n+1)} (ax+b)^{n+1} + C
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-023.png
+% // latex: \int k(ax+b)^n dx = \frac {k}{a(n+1)} (ax+b)^{n+1} + C
+>
+%  Dalam bentuk integral keenam hanya berlaku jika angka pada pangkat x
+% adalah 1.
+% 
+% 
+%     C. Contoh Soal & Kurva
+%% Soal 1
+%% latex: \int 5x^2 dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-024.png
+% // latex: \int 5x^2 dx
+>$showev('integrate(5*x^2,x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-025.png
+% // latex: 5\,\int {x^2}{\;dx}+c=\frac{5\,x^3}{3}+c
+>plot2d(["5*x^2","(5*x^3/3)","(5*x^3/3)+1","(5*x^3/3)+2"]):
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-026.png
+% Soal 2
+% 
+% latex: f(x)= 4x+2, g(x)= 2x+1
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-027.png
+% // latex: f(x)= 4x+2, g(x)= 2x+1
+>function f(x) &&= 4*x+2
+
+                               4 x + 2
+
+>function g(x) &&= 2*x+1
+
+                               2 x + 1
+
+>$showev('integrate(f(x)+(g(x)),x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-028.png
+% // latex: \int {6\,x+3}{\;dx}+c=3\,x^2+3\,x+c
+>plot2d(["6*x+3","3*x^2+3*x","(3*x^2+3*x)+1","(3*x^2+3*x)+2"]):
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-029.png
+% Soal 3
+>$showev('integrate(x*sqrt(x+2),x))
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-030.png
+% // latex: \int {x\,\sqrt{x+2}}{\;dx}=\frac{2\,\left(x+2\right)^{\frac{5}{2}}  }{5}-\frac{4\,\left(x+2\right)^{\frac{3}{2}}}{3}
+>
+% ---
+%% 4. INTERGAL TAK TENTU FUNGSI NON ALJABAR (transenden)
+%%     4.1 Intergal Tak Tentu Fungsi Trigonometri
+% 
+%         A. Defnisi
+%%     Integral tak tentu fungsi trigonometri merupakan operasi
+% matematika yang digunakan untuk mencari fungsi asal sebelumnya
+% (biasanya ditambahkan dengan konstanta) yang ketika diambil turunan
+% akan menghasilkan fungsi trigonometri tersebut.
+%%     Secara umum, integral tak tentu fungsi trigonometri seperti
+% sin(x), cos(x), atau tan(x) melibatkan berbagai rumus dan teknik
+% integral yang berbeda tergantung pada jenis fungsi trigonometri yang
+% terlibat.
+% 
+%         B. Rumus-rumus integral fungsi trigonometri
+% 
+% image: trigonometri.png
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-031.png
+% 
+%         C. Contoh Soal & Kurva
+%% Soal 1
+% 
+% latex: \int 2 cos x dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-032.png
+% // latex: \int 2 cos x dx
+>$showev('integrate(2*cos(x),x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-033.png
+% // latex: 2\,\int {\cos x}{\;dx}+c=2\,\sin x+c
+>plot2d(["2*cos(x)","2*sin(x)","2*sin(x)+1","2*sin(x)+2"]):
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-034.png
+% Soal 2
+% 
+% latex: \int cos (2x+1) dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-035.png
+% // latex: \int cos (2x+1) dx
+>$showev('integrate(cos(2*x+1),x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-036.png
+% // latex: \int {\cos \left(2\,x+1\right)}{\;dx}+c=\frac{\sin \left(2\,x+1  \right)}{2}+c
+>plot2d(["cos(2*x+1)","sin(2*x+1)/2","(sin(2*x+1)/2)+1","(sin(2*x+1)/2)+2"]):
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-037.png
+>
+%  4.2 Intergal Tak Tentu Fungsi Eksponensial
+% 
+%         A. Defnisi
+%%      Integral dari fungsi eksponensial adalah operasi matematika yang
+% digunakan untuk menemukan area di bawah kurva fungsi eksponensial
+% tertentu. Integral fungsi eksponensial merupakan proses untuk
+% menemukan fungsi yang, ketika di turunkan, akan menghasilkan fungsi
+% eksponensial tersebut.
+% 
+%         B. Rumus-rumus integral fungsi eksponensial
+%% Secara umum, integral dari fungsi eksponensial e^x adalah:
+% 
+% latex: \int e^x dx = e^x + c
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-038.png
+% // latex: \int e^x dx = e^x + c
+>$showev('integrate((E^x),x)+ c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-039.png
+% // latex: \int {e^{x}}{\;dx}+c=e^{x}+c
+% di mana "C" adalah konstanta integrasi. Ini berarti hasil dari
+% integral ini adalah fungsi eksponensial e^x itu sendiri ditambah
+% dengan konstanta integrasi.
+% 
+%        C. Contoh Soal & Kurva
+% 
+% Soal 1
+%% latex: \int e^{3x} dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-040.png
+% // latex: \int e^{3x} dx
+>$showev('integrate((E^x)^3,x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-041.png
+% // latex: \int {e^{3\,x}}{\;dx}+c=\frac{e^{3\,x}}{3}+c
+> \plot2d(["(E^x)^3","((E^x)^3)/3","(((E^x)^3)/3)+7"],color=[blue,red,green]):
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-042.png
+% Soal 2
+%% latex: \int xe^{2x} dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-043.png
+% // latex: \int xe^{2x} dx
+>$showev('integrate(x*(E^x)^2,x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-044.png
+% // latex: \int {x\,e^{2\,x}}{\;dx}+c=\frac{\left(2\,x-1\right)\,e^{2\,x}}{4}+  c
+>plot2d(["x*(E^x)^2","((2*x-1)E^x^2)/4","(2*x-1)E^x^2/4 +1"]):
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-045.png
+>
+%  4.3 Intergal Tak Tentu Fungsi Logaritma
+%%         A. Defnisi
+%%     Integral dari fungsi logaritma adalah operasi matematika yang
+% digunakan untuk menemukan area di bawah kurva fungsi logaritma
+% tertentu.
+% 
+%         B. Rumus integral fungsi logaritma
+% 
+% latex: \int log(x) dx = x log(x) - x + C
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-046.png
+% // latex: \int log(x) dx = x log(x) - x + C
+>$showev('integrate(ln(x),x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-047.png
+% // latex: \int {\log x}{\;dx}+c=x\,\log x-x+c
+%         C. Contoh Soal & Kurva
+%% Soal 1
+% 
+% latex: \int log(2x) dx
+% %image% Syifa Desta Rumaisha aplikom integral tak tentu-048.png
+% // latex: \int log(2x) dx
+>$showev('integrate(log(2*x),x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-049.png
+% // latex: \int {\log \left(2\,x\right)}{\;dx}+c=\frac{2\,x\,\log \left(2\,x  \right)-2\,x}{2}+c
+>plot2d(["log(2*x)","(2*x)log(2*x)-2*x/2 +1","(2*x)log(2*x)-2*x/2 +2"]):
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-050.png
+>
+>
+% ---
+%% 5. INTERGAL TAK TENTU FUNGSI KOMPOSISI
+% 
+%    A. Defnisi
+%%     Integral tak tentu dari fungsi komposisi, juga dikenal sebagai
+% "integral tak tentu dari substitusi," adalah teknik integral yang
+% digunakan untuk mengintegrasikan fungsi yang merupakan hasil dari
+% komposisi dua fungsi.
+% 
+%   B. Contoh Soal dan kurva
+% 
+% Soal 1
+%%    f(x)=x+1, g(x)=x+2
+>function f(x) &= x+1
+
+                                x + 1
+
+>function g(x) &= x+2
+
+                                x + 2
+
+>$showev('integrate(f(g(x)),x)+c)
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-051.png
+% // latex: \int {x+3}{\;dx}+c=\frac{x^2}{2}+3\,x+c
+>plot2d(["x+3","((x^2)/2)+3*x","(((x^2)/2)+3*x)+1","(((x^2)/2)+3*x)+2"]):
+ %image% Syifa Desta Rumaisha aplikom integral tak tentu-052.png
+>
+% * TERIMAKSIH
+% ---
+>
+> 
+> 
+>
+>
